@@ -1,0 +1,15 @@
+<%= form_for :command, url: vpc_index_path(:format => "json") do |c| %>
+  <p>
+    <%= c.label :command %><br>
+    <%= c.text_field :command %>
+  </p>
+ 
+  <p>
+    <%= c.label :attrib %><br>
+    <%= c.text_field :attrib %>
+  </p>
+ 
+  <p>
+    <%= c.submit %>
+  </p>
+<% end %>
