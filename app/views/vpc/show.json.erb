@@ -1,0 +1,18 @@
+{[
+	<% @interfaces.each do |ifname, ifvalues|  %>
+	{
+		"<%= ifname %>":
+		     {
+		     <% ifvalues.each do |key,value|  %>
+		     "<%= key %>" : "<%= value.strip %>"
+		     <% if not key == ifvalues.keys.last %>
+		     ,
+		     <% end %>
+		     <% end %>
+		     }
+	}
+	<% if not ifname == @interfaces.keys.last %>
+	,
+	<% end %>
+	<% end %>
+]}

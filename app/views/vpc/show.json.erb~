@@ -1,0 +1,10 @@
+{
+	<% @interfaces.each do |ifname, ifvalues|  %>
+	{
+		"ifname" : "<%= ifname %>" 
+		<% ifvalues.each do |key,value|  %>
+		   "<%= key %>" : "<%= value %>" 
+		<% end %>
+	}
+	<% end %>
+}
